@@ -45,10 +45,15 @@ JSL_DJANGO_SITEMAP_SETTINGS = {
 	"INCLUDE_APPS": ("ALL",)
 }
 
-# "ALL" means to include all the urls
-# if you want specific apps to be included in sitemap use below. Provide comma separated tuple containing your app name
-# "INCLUDE_APPS": ("myapp1","myapp2")
 ```
+
+
+> **_NOTE:_**
+> 1. "ALL" means to include all the urls
+> 2. If you want specific apps to be included in sitemap use below. Provide comma separated tuple containing your app name
+> 3. "INCLUDE_APPS": ("myapp1","myapp2")
+
+
 
 ## View generated sitemap:
 
@@ -58,5 +63,5 @@ Start the development server and visit http://127.0.0.1:8000/sitemap.xml
 
 ## Current Releases
 
-[1.0.4](https://github.com/JSoftwareLabs/JSLFireBaseUtils/releases/tag/1.0.4)
+[1.0.5](https://github.com/JSoftwareLabs/jsl_django_sitemap/releases/tag/1.0.5)
 

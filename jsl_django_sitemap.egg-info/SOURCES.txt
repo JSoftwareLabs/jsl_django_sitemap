@@ -1,5 +1,6 @@
+LICENSE
 MANIFEST.in
-README.rst
+README.md
 setup.cfg
 setup.py
 jsl_django_sitemap/__init__.py

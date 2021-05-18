@@ -10,9 +10,9 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 setup(
 	name='jsl_django_sitemap',  # How you named your package folder (MyLib)
 	packages=setuptools.find_packages(),  # Chose the same as "name"
-	version='1.0.4',  # Start with a small number and increase it with every change you make
+	version='1.0.5',  # Start with a small number and increase it with every change you make
 	license='MIT',  # Chose a license from here: https://help.github.com/articles/licensing-a-repository
-	description='JSL Django Sitemap is a Django app to which iterates over all the url patterns in your main Django project and creates a ready to use sitemap. The sitemap.xml is useful in crawlers such as Google, Bing, Yahoo. We hope you like our app! Leave a star on our github repository. Thanks!',
+	description='JSL Django Sitemap is a Django utility which iterates over all the url patterns in your main Django project and creates a ready to use sitemap. The sitemap.xml is useful in crawlers such as Google, Bing, Yahoo. We hope you like our app! Leave a star on our GitHub repository. Thanks!',
 	# Give a short description about your library
 	long_description=long_description,
 	long_description_content_type='text/markdown',
@@ -20,7 +20,7 @@ setup(
 	author_email='info@jsoftwarelabs.com',  # Type in your E-Mail
 	url='https://github.com/JSoftwareLabs/jsl_django_sitemap',
 	# Provide either the link to your github or to your website
-	download_url='https://github.com/JSoftwareLabs/jsl_django_sitemap/archive/refs/tags/V1_0_4.tar.gz',
+	download_url='https://github.com/JSoftwareLabs/jsl_django_sitemap/archive/refs/tags/V1_0_5.tar.gz',
 	# I explain this later on
 	keywords=['Django sitemap', 'JSoftwareLabs', 'sitemap.xml', 'Django automated sitemaps'],
 	# Keywords that define your package best
@@ -29,7 +29,7 @@ setup(
 	],
 	include_package_data=True,
 	classifiers=[
-		'Development Status :: 4 - Beta',
+		'Development Status :: 5 - Production/Stable',
 		# Chose either "3 - Alpha", "4 - Beta" or "5 - Production/Stable" as the current state of your package
 		'Intended Audience :: Developers',  # Define that your audience are developers
 		'Topic :: Software Development :: Build Tools',
