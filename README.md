@@ -1,0 +1,62 @@
+# JSL Django Sitemap
+
+JSL Django Sitemap is a Django app to which iterates over all the url patterns in your main Django project and creates a
+ready to use sitemap. The sitemap.xml is useful in crawlers such as Google, Bing, Yahoo. We hope you like our app! Leave
+a star on our github repository. Thanks!
+
+# Our Home page [JSoftwareLabs.com](https://www.jsoftwarelabs.com/)
+
+## Installation
+
+You can install the JSLFireBaseUtils from [PyPI](https://pypi.org/project/jsl-django-sitemap/):
+
+    pip install jsl_django_sitemap
+
+---
+
+# Example Usage
+
+Add necessary imports
+---
+
+```python
+from jsl_django_sitemap.views import sitemaps
+from django.contrib.sitemaps.views import sitemap
+from django.urls import path
+
+```
+
+In your main django project urls.py file add below in urlpatterns
+---
+
+```python
+
+path('sitemap.xml', sitemap, {'sitemaps': sitemaps},
+	 name='django.contrib.sitemaps.views.sitemap'),
+```
+
+In your main settings.py file dd below
+---
+
+```python
+
+JSL_DJANGO_SITEMAP_SETTINGS = {
+	"ENABLE": True,
+	"INCLUDE_APPS": ("ALL",)
+}
+
+# "ALL" means to include all the urls
+# if you want specific apps to be included in sitemap use below. Provide comma separated tuple containing your app name
+# "INCLUDE_APPS": ("myapp1","myapp2")
+```
+
+## View generated sitemap:
+
+Start the development server and visit http://127.0.0.1:8000/sitemap.xml
+
+-----
+
+## Current Releases
+
+[V-1.0.4](https://github.com/JSoftwareLabs/JSLFireBaseUtils/releases/tag/V1_0_7)
+

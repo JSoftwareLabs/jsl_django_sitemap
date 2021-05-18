@@ -1,0 +1,17 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+jsl_django_sitemap/__init__.py
+jsl_django_sitemap/apps.py
+jsl_django_sitemap/default_settings.py
+jsl_django_sitemap/jsl_sitemap_utils.py
+jsl_django_sitemap/models.py
+jsl_django_sitemap/tests.py
+jsl_django_sitemap/views.py
+jsl_django_sitemap.egg-info/PKG-INFO
+jsl_django_sitemap.egg-info/SOURCES.txt
+jsl_django_sitemap.egg-info/dependency_links.txt
+jsl_django_sitemap.egg-info/requires.txt
+jsl_django_sitemap.egg-info/top_level.txt
+jsl_django_sitemap/migrations/__init__.py
