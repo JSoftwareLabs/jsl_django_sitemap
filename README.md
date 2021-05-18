@@ -1,5 +1,7 @@
 # JSL Django Sitemap
 
+[![Upload Python Package](https://github.com/JSoftwareLabs/jsl_django_sitemap/actions/workflows/python-publish.yml/badge.svg)](https://github.com/JSoftwareLabs/jsl_django_sitemap/actions/workflows/python-publish.yml)
+
 JSL Django Sitemap is a Django utility which iterates over all the url patterns in your main Django project and creates a
 ready to use sitemap. The sitemap.xml is useful in crawlers such as Google, Bing, Yahoo. We hope you like our app! Leave
 a star on our GitHub repository. Thanks!
