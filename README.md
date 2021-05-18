@@ -8,9 +8,9 @@ a star on our GitHub repository. Thanks!
 
 ## Installation
 
-You can install the JSLFireBaseUtils from [PyPI](https://pypi.org/project/jsl-django-sitemap/):
+You can install the JSL Django Sitemap from [PyPI](https://pypi.org/project/jsl-django-sitemap/):
 
-    pip install jsl_django_sitemap
+    pip install jsl-django-sitemap
 
 ---
 
@@ -63,5 +63,5 @@ Start the development server and visit http://127.0.0.1:8000/sitemap.xml
 
 ## Current Releases
 
-[1.0.5](https://github.com/JSoftwareLabs/jsl_django_sitemap/releases/tag/1.0.5)
+[1.0.6](https://github.com/JSoftwareLabs/jsl_django_sitemap/releases/tag/1.0.6)
 

@@ -1,12 +1,12 @@
 Metadata-Version: 2.1
 Name: jsl-django-sitemap
-Version: 1.0.5
+Version: 1.0.6
 Summary: JSL Django Sitemap is a Django utility which iterates over all the url patterns in your main Django project and creates a ready to use sitemap. The sitemap.xml is useful in crawlers such as Google, Bing, Yahoo. We hope you like our app! Leave a star on our GitHub repository. Thanks!
 Home-page: https://github.com/JSoftwareLabs/jsl_django_sitemap
 Author: JSoftwareLabs.com
 Author-email: info@jsoftwarelabs.com
 License: MIT
-Download-URL: https://github.com/JSoftwareLabs/jsl_django_sitemap/archive/refs/tags/V1_0_5.tar.gz
+Download-URL: https://github.com/JSoftwareLabs/jsl_django_sitemap/archive/refs/tags/V1_0_6.tar.gz
 Description: # JSL Django Sitemap
         
         JSL Django Sitemap is a Django utility which iterates over all the url patterns in your main Django project and creates a
@@ -17,9 +17,9 @@ Description: # JSL Django Sitemap
         
         ## Installation
         
-        You can install the JSLFireBaseUtils from [PyPI](https://pypi.org/project/jsl-django-sitemap/):
+        You can install the JSL Django Sitemap from [PyPI](https://pypi.org/project/jsl-django-sitemap/):
         
-            pip install jsl_django_sitemap
+            pip install jsl-django-sitemap
         
         ---
         
@@ -72,7 +72,7 @@ Description: # JSL Django Sitemap
         
         ## Current Releases
         
-        [1.0.5](https://github.com/JSoftwareLabs/jsl_django_sitemap/releases/tag/1.0.5)
+        [1.0.6](https://github.com/JSoftwareLabs/jsl_django_sitemap/releases/tag/1.0.6)
         
         
 Keywords: Django sitemap,JSoftwareLabs,sitemap.xml,Django automated sitemaps
