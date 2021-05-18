@@ -72,5 +72,5 @@ Start the development server and visit http://127.0.0.1:8000/sitemap.xml
 
 ## Current Releases
 
-[1.0.7](https://github.com/JSoftwareLabs/jsl_django_sitemap/releases/tag/1.0.7)
+[1.0.8](https://github.com/JSoftwareLabs/jsl_django_sitemap/releases/tag/1.0.8)
 
