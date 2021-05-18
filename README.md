@@ -35,7 +35,7 @@ path('sitemap.xml', sitemap, {'sitemaps': sitemaps},
 	 name='django.contrib.sitemaps.views.sitemap'),
 ```
 
-In your main settings.py file dd below
+In your main settings.py file add below
 ---
 
 ```python
