@@ -1,12 +1,12 @@
 Metadata-Version: 2.1
 Name: jsl-django-sitemap
-Version: 1.0.4
-Summary: JSL Django Sitemap is a Django app to which iterates over all the url patterns in your main Django project and creates a ready to use sitemap. The sitemap.xml is useful in crawlers such as Google, Bing, Yahoo. We hope you like our app! Leave a star on our github repository. Thanks!
+Version: 1.0.5
+Summary: JSL Django Sitemap is a Django utility which iterates over all the url patterns in your main Django project and creates a ready to use sitemap. The sitemap.xml is useful in crawlers such as Google, Bing, Yahoo. We hope you like our app! Leave a star on our GitHub repository. Thanks!
 Home-page: https://github.com/JSoftwareLabs/jsl_django_sitemap
 Author: JSoftwareLabs.com
 Author-email: info@jsoftwarelabs.com
 License: MIT
-Download-URL: https://github.com/JSoftwareLabs/jsl_django_sitemap/archive/refs/tags/V1_0_4.tar.gz
+Download-URL: https://github.com/JSoftwareLabs/jsl_django_sitemap/archive/refs/tags/V1_0_5.tar.gz
 Description: # JSL Django Sitemap
         
         JSL Django Sitemap is a Django utility which iterates over all the url patterns in your main Django project and creates a
@@ -54,10 +54,15 @@ Description: # JSL Django Sitemap
         	"INCLUDE_APPS": ("ALL",)
         }
         
-        # "ALL" means to include all the urls
-        # if you want specific apps to be included in sitemap use below. Provide comma separated tuple containing your app name
-        # "INCLUDE_APPS": ("myapp1","myapp2")
         ```
+        
+        
+        > **_NOTE:_**
+        > 1. "ALL" means to include all the urls
+        > 2. If you want specific apps to be included in sitemap use below. Provide comma separated tuple containing your app name
+        > 3. "INCLUDE_APPS": ("myapp1","myapp2")
+        
+        
         
         ## View generated sitemap:
         
@@ -67,12 +72,12 @@ Description: # JSL Django Sitemap
         
         ## Current Releases
         
-        [1.0.4](https://github.com/JSoftwareLabs/jsl_django_sitemap/releases/tag/1.0.4)
+        [1.0.5](https://github.com/JSoftwareLabs/jsl_django_sitemap/releases/tag/1.0.5)
         
         
 Keywords: Django sitemap,JSoftwareLabs,sitemap.xml,Django automated sitemaps
 Platform: UNKNOWN
-Classifier: Development Status :: 4 - Beta
+Classifier: Development Status :: 5 - Production/Stable
 Classifier: Intended Audience :: Developers
 Classifier: Topic :: Software Development :: Build Tools
 Classifier: License :: OSI Approved :: Apache Software License
