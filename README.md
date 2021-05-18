@@ -47,6 +47,13 @@ JSL_DJANGO_SITEMAP_SETTINGS = {
 
 ```
 
+# add django built in sitemap in the INSTALLED_APPS
+```python
+INSTALLED_APPS = [
+	#...
+	'django.contrib.sitemaps',
+]
+```
 
 > **_NOTE:_**
 > 1. "ALL" means to include all the urls
@@ -63,5 +70,5 @@ Start the development server and visit http://127.0.0.1:8000/sitemap.xml
 
 ## Current Releases
 
-[1.0.6](https://github.com/JSoftwareLabs/jsl_django_sitemap/releases/tag/1.0.6)
+[1.0.7](https://github.com/JSoftwareLabs/jsl_django_sitemap/releases/tag/1.0.7)
 
