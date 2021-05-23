@@ -3,7 +3,7 @@ from django.conf import settings
 
 logger = logging.getLogger(__name__)
 FETCH_URL_FROM = "FETCH_URL_FROM"
-DEFAULT_FETCH_URL_FROM = "name"
+DEFAULT_FETCH_URL_FROM = "pattern"
 ENABLE = "ENABLE"
 INCLUDE_APPS = "INCLUDE_APPS"
 
