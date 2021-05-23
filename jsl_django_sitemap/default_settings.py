@@ -26,7 +26,7 @@ def fetch_default_settings():
 def ensure_correct_params(default_settings_v):
 	if default_settings_v.get(FETCH_URL_FROM) not in FETCH_URL_FROM_ALLOWED_PARAMS:
 		error_message = "FETCH_URL_FROM  should be one of " + str(
-			FETCH_URL_FROM_ALLOWED_PARAMS + "Now defaulting to 'pattern'")
+			FETCH_URL_FROM_ALLOWED_PARAMS) + "Now defaulting to 'pattern'"
 		logger.error(error_message)
 		default_settings_v[FETCH_URL_FROM] = DEFAULT_FETCH_URL_FROM
 	return default_settings_v
