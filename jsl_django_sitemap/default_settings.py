@@ -19,12 +19,14 @@ def fetch_default_settings():
 		}
 		return JSL_DJANGO_SITEMAP_SETTINGS
 	else:
-		ensure_correct_params(getattr(settings, 'JSL_DJANGO_SITEMAP_SETTINGS', None))
-		return getattr(settings, 'JSL_DJANGO_SITEMAP_SETTINGS', None)
+		default_settings_v = ensure_correct_params(getattr(settings, 'JSL_DJANGO_SITEMAP_SETTINGS', None))
+		return default_settings_v
 
 
 def ensure_correct_params(default_settings_v):
 	if default_settings_v.get(FETCH_URL_FROM) not in FETCH_URL_FROM_ALLOWED_PARAMS:
-		error_message = "FETCH_URL_FROM  should be one of " + str(FETCH_URL_FROM_ALLOWED_PARAMS)
+		error_message = "FETCH_URL_FROM  should be one of " + str(
+			FETCH_URL_FROM_ALLOWED_PARAMS + "Now defaulting to 'pattern'")
 		logger.error(error_message)
-		raise Exception(error_message)
+		default_settings_v[FETCH_URL_FROM] = DEFAULT_FETCH_URL_FROM
+	return default_settings_v
