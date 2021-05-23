@@ -1,7 +1,8 @@
 import importlib
 import logging
-
 from django.conf import settings
+
+from .default_settings import FETCH_URL_FROM, FETCH_URL_FROM_ALLOWED_PARAMS
 
 logger = logging.getLogger(__name__)
 
@@ -29,7 +30,7 @@ def filter_include_apps_in_url(all_urls, include_apps):
 	return modified_all_urls
 
 
-def iterate_over_django_urls(all_urls, return_url_list=set()):
+def iterate_over_django_urls(all_urls, default_settings, return_url_list=set()):
 	for url in all_urls:
 		try:
 			if url.url_patterns:
@@ -37,7 +38,15 @@ def iterate_over_django_urls(all_urls, return_url_list=set()):
 		except:
 			try:
 				if 'sitemap' not in url.name:
-					return_url_list.add(url.name)
+					if "pattern" == default_settings.get(FETCH_URL_FROM).lower():
+						pattern = str(url.pattern)
+						if "^" == pattern[0]:
+							pattern = pattern[1:]
+						if "$" == pattern[len(pattern) - 1]:
+							pattern = pattern[:len(pattern) - 1]
+							return_url_list.add(pattern)
+					else:
+						return_url_list.add(url.name)
 			except:
 				pass
 
@@ -53,6 +62,6 @@ def get_django_urls(urlpatterns, default_settings=None):
 	if enable and include_apps is not None:
 
 		all_urls = filter_include_apps_in_url(urlpatterns, include_apps)
-		return list(iterate_over_django_urls(all_urls))
+		return list(iterate_over_django_urls(all_urls, default_settings))
 	else:
 		return []
