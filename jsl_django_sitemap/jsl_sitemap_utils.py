@@ -34,7 +34,7 @@ def iterate_over_django_urls(all_urls, default_settings, return_url_list=set()):
 	for url in all_urls:
 		try:
 			if url.url_patterns:
-				iterate_over_django_urls(url.url_patterns, return_url_list)
+				iterate_over_django_urls(url.url_patterns,default_settings, return_url_list)
 		except:
 			try:
 				if 'sitemap' not in url.name:
