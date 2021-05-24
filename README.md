@@ -44,7 +44,7 @@ In your main settings.py file add below
 
 JSL_DJANGO_SITEMAP_SETTINGS = {
 	"ENABLE": True,
-	"FETCH_URL_FROM": "name",
+	"FETCH_URL_FROM": "pattern",
 	"INCLUDE_APPS": ("ALL",)
 }
 
