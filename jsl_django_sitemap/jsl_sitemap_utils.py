@@ -42,16 +42,15 @@ def iterate_over_django_urls(all_urls, default_settings, return_url_list=set(),p
 				iterate_over_django_urls(url.url_patterns,default_settings, return_url_list,prefix=prefix)
 		except:
 			try:
-				if 'sitemap' not in url.name:
-					if "pattern" == default_settings.get(FETCH_URL_FROM).lower():
-						pattern = str(url.pattern)
-						if "^" == pattern[0]:
-							pattern = pattern[1:]
-						if "$" == pattern[len(pattern) - 1]:
-							pattern = pattern[:len(pattern) - 1]
-							return_url_list.add(prefix + pattern)
-					else:
-						return_url_list.add(prefix + url.name)
+				if "pattern" == default_settings.get(FETCH_URL_FROM).lower():
+					pattern = str(url.pattern)
+					if "^" == pattern[0]:
+						pattern = pattern[1:]
+					if "$" == pattern[len(pattern) - 1]:
+						pattern = pattern[:len(pattern) - 1]
+					return_url_list.add(prefix + pattern)
+				else:
+					return_url_list.add(prefix + url.name)
 			except:
 				pass
 
