@@ -1,6 +1,10 @@
 # JSL Django Sitemap
 
 [![Upload Python Package](https://github.com/JSoftwareLabs/jsl_django_sitemap/actions/workflows/python-publish.yml/badge.svg)](https://github.com/JSoftwareLabs/jsl_django_sitemap/actions/workflows/python-publish.yml)
+---
+A sitemap is an XML file on your website that tells search-engine crawlers or indexers how frequently your pages change and how “important” certain pages are in relation to other pages on your site. This information helps search engines index your site.
+
+This Django sitemap framework library automates the creation of this XML file by letting you express this information in Python code. You have the ability to chnge and mention settings in your Django project's settings.py file. It is very convinent and easy to use library which detects the changes in your Django url configuration and reloads the new configuration making absolutely no manual interventions for your sitemap.
 
 JSL Django Sitemap is a sitemap.xml creator for Django projects which iterates over all the url patterns in your main
 Django project and creates a ready to use sitemap. The sitemap.xml is useful in crawlers such as Google, Bing, Yahoo. We
@@ -66,6 +70,9 @@ INSTALLED_APPS = [
 > 4. FETCH_URL_FROM: should be one value from the list ["name", "pattern"]
 > 5. default for FETCH_URL_FROM is "pattern"
 > 6. By default, if pattern is provided then "^" prefix and "$" suffix in urlpattern is removed.
+
+**_NOTE:_**
+The sitemap application doesn’t install any database tables. The only reason it needs to go into INSTALLED_APPS is so that the Loader() template loader can find the default templates.
 
 ## View generated sitemap:
 
