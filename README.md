@@ -82,7 +82,7 @@ Start the development server and visit http://127.0.0.1:8000/sitemap.xml
 
 ## Current Releases
 
-[1.2.3](https://github.com/JSoftwareLabs/jsl_django_sitemap/releases/tag/1.2.3)
+[1.2.4](https://github.com/JSoftwareLabs/jsl_django_sitemap/releases/tag/1.2.4)
 
 ## How to build and distribute using sdist setup.py and twine
 
