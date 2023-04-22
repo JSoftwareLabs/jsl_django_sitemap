@@ -36,9 +36,8 @@ In your main django project urls.py file add below in urlpatterns
 ---
 
 ```python
-
 path('sitemap.xml', sitemap, {'sitemaps': sitemaps},
-	 name='django.contrib.sitemaps.views.sitemap'),
+name='django.contrib.sitemaps.views.sitemap'),
 ```
 
 In your main settings.py file add below
@@ -49,7 +48,8 @@ In your main settings.py file add below
 JSL_DJANGO_SITEMAP_SETTINGS = {
 	"ENABLE": True,
 	"FETCH_URL_FROM": "pattern",
-	"INCLUDE_APPS": ("ALL",)
+	"INCLUDE_APPS": ("ALL",),
+	"IGNORE_URL_PATTERNS": (".*/api/v1.*", )
 }
 
 ```
@@ -70,9 +70,9 @@ INSTALLED_APPS = [
 > 4. FETCH_URL_FROM: should be one value from the list ["name", "pattern"]
 > 5. default for FETCH_URL_FROM is "pattern"
 > 6. By default, if pattern is provided then "^" prefix and "$" suffix in urlpattern is removed.
-
+> 7. "IGNORE_URL_PATTERNS": (".*/api/v1.*", ) This flag is used to ignore certain urls matching the provided tuple of patterns which are regex compatible
 **_NOTE:_**
-The sitemap application doesn’t install any database tables. The only reason it needs to go into INSTALLED_APPS is so that the Loader() template loader can find the default templates.
+The sitemap application doesn't install any database tables. The only reason it needs to go into INSTALLED_APPS is so that the Loader() template loader can find the default templates.
 
 ## View generated sitemap:
 
@@ -82,5 +82,12 @@ Start the development server and visit http://127.0.0.1:8000/sitemap.xml
 
 ## Current Releases
 
-[1.2.0](https://github.com/JSoftwareLabs/jsl_django_sitemap/releases/tag/1.2.0)
+[1.2.3](https://github.com/JSoftwareLabs/jsl_django_sitemap/releases/tag/1.2.3)
 
+## How to build and distribute using sdist setup.py and twine
+
+```bash
+python3 -m pip install --upgrade twine
+python setup.py sdist
+twine upload dist/*
+```

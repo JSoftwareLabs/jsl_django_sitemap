@@ -6,6 +6,7 @@ FETCH_URL_FROM = "FETCH_URL_FROM"
 DEFAULT_FETCH_URL_FROM = "pattern"
 ENABLE = "ENABLE"
 INCLUDE_APPS = "INCLUDE_APPS"
+IGNORE_URL_PATTERNS = ()
 
 FETCH_URL_FROM_ALLOWED_PARAMS = ["name", "pattern"]
 
@@ -15,11 +16,14 @@ def fetch_default_settings():
 		JSL_DJANGO_SITEMAP_SETTINGS = {
 			ENABLE: True,
 			FETCH_URL_FROM: DEFAULT_FETCH_URL_FROM,
-			INCLUDE_APPS: ("ALL",)
+			INCLUDE_APPS: ("ALL",),
+			IGNORE_URL_PATTERNS: IGNORE_URL_PATTERNS
 		}
 		return JSL_DJANGO_SITEMAP_SETTINGS
 	else:
 		default_settings_v = ensure_correct_params(getattr(settings, 'JSL_DJANGO_SITEMAP_SETTINGS', None))
+		if default_settings_v.get('IGNORE_URL_PATTERNS') is None:
+			default_settings_v['IGNORE_URL_PATTERNS'] = IGNORE_URL_PATTERNS
 		return default_settings_v
 
 

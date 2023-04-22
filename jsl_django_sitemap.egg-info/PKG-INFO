@@ -1,12 +1,12 @@
 Metadata-Version: 2.1
 Name: jsl-django-sitemap
-Version: 1.2.0
+Version: 1.2.3
 Summary: JSL Django Sitemap is a Django utility which iterates over all the url patterns in your main Django project and creates a ready to use sitemap. The sitemap.xml is useful in crawlers such as Google, Bing, Yahoo. We hope you like our app! Leave a star on our GitHub repository. Thanks!
 Home-page: https://github.com/JSoftwareLabs/jsl_django_sitemap
 Author: JSoftwareLabs.com
 Author-email: info@jsoftwarelabs.com
 License: MIT
-Download-URL: https://github.com/JSoftwareLabs/jsl_django_sitemap/archive/refs/tags/1.2.0.tar.gz
+Download-URL: https://github.com/JSoftwareLabs/jsl_django_sitemap/archive/refs/tags/1.2.3.tar.gz
 Keywords: Django sitemap,JSoftwareLabs,sitemap.xml,Django automated sitemaps
 Platform: UNKNOWN
 Classifier: Development Status :: 5 - Production/Stable
@@ -59,9 +59,8 @@ In your main django project urls.py file add below in urlpatterns
 ---
 
 ```python
-
 path('sitemap.xml', sitemap, {'sitemaps': sitemaps},
-	 name='django.contrib.sitemaps.views.sitemap'),
+name='django.contrib.sitemaps.views.sitemap'),
 ```
 
 In your main settings.py file add below
@@ -105,7 +104,14 @@ Start the development server and visit http://127.0.0.1:8000/sitemap.xml
 
 ## Current Releases
 
-[1.2.0](https://github.com/JSoftwareLabs/jsl_django_sitemap/releases/tag/1.1.9)
+[1.2.3](https://github.com/JSoftwareLabs/jsl_django_sitemap/releases/tag/1.2.3)
 
+## How to build and distribute using sdist setup.py and twine
+
+```bash
+python3 -m pip install --upgrade twine
+python setup.py sdist
+twine upload dist/*
+```
 
 
