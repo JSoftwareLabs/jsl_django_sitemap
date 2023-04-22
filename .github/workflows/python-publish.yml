@@ -43,8 +43,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
         with:
-          tag_name: 1.2.3
-          release_name: 1.2.3
+          tag_name: 1.2.4
+          release_name: 1.2.4
           body: |
             Changes in this Release
             - Adding actions and automated builds
