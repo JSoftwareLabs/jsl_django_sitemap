@@ -64,7 +64,6 @@ def get_django_urls(urlpatterns, default_settings=None):
 	enable = default_settings.get('ENABLE')
 	include_apps = default_settings.get('INCLUDE_APPS')
 	if enable and include_apps is not None:
-
 		all_urls = filter_include_apps_in_url(urlpatterns, include_apps)
 		return list(iterate_over_django_urls(all_urls, default_settings))
 	else:
