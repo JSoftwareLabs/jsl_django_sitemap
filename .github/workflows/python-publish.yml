@@ -7,8 +7,9 @@ on:
   push:
     paths:
       - '**.py'
+      - '**.yml'
     branches:
-      - master
+      - 'release/**'
 
 jobs:
   deploy:
